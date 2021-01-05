@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: comic sans ms;
+}
+.container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #e1ad01;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile{
+    position: relative;
+    width: 70vw;
+    height: 80vh;   
+    background-color: seashell;
+    box-shadow: 0 10px 20px -6px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile::before{
+    content: '';
+    position: absolute;
+    left: 0px;
+    width: 20%;
+    height: 100%;   
+    background-color: #f4c430;
+}
+.profile::after{
+    content: '';
+    position: absolute;
+    right: 20px;
+    width: 10px;
+    height: 90%;   
+    background-color: #343434;
+    border-radius: 50px;
+}
+.profile .navbar{
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    width: 50px;
+    height: 30px;
+    color: #fff;
+    font-size: 1rem;
+    background-color: slategray;
+    padding: 5px 20px 3px;
+    margin: 10px 0px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    z-index: 2;
+}
+.profile .dp{
+    box-shadow: 0 10px 20px -6px #000;
+    height: 412px;
+    z-index: 2;
+}
+.profile .biodata{
+    position: relative;
+    width: 500px;
+    height: 400px;
+    padding: 30px;
+    margin: 30px 30px;
+}
+.profile .biodata h6{
+    color: #fff;
+    font-size: 1rem;
+    background-color: slategray;
+    display: inline-block;
+    padding: 2px 5px;
+    margin: 20px 0px;
+    letter-spacing: 2px;
+}
+.profile .biodata h1{
+    font-size: 2.5rem;
+    color: #343434;
+    letter-spacing: 4px;
+}
+.profile .biodata p{
+    width: 400px;
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, 0.4);
+    margin: 20px 0px;
+}
+.profile .biodata h3{
+    margin-top: 50px;
+    font-size: 1.2rem;
+    color: #343434;
+    letter-spacing: 2px;
+}
+.profile a{
+    width: 30px;
+    height: 40px;
+    position: absolute;
+    text-decoration: none;
+    background-color: #000;
+    padding: 3px 12px;
+    font-size: 20px;
+    z-index: 2;
+    bottom: 10px;
+    right: 20px;
+    overflow: hidden;
+    transition: width 0.5s;
+    border-radius: 3px;
+    box-shadow: 3px 6px 10px -6px #000;
+}
+.profile a span{
+    position: absolute;
+    color: #a9a9a9;
+    transform: translate(20px, 4px);
+}
+.profile a img{
+    transform: translateY(20%);
+}
+.profile a:hover{
+    width: 130px;
+}

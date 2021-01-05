@@ -1,0 +1,13 @@
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        {{#if user }}
+            <li style="transform: translateX(350px);"><img width="25px" src="/profile/logout.jfif" style="transform: translate(40px, 10px);" alt=""><a style="text-transform: none; color: #4a708b; text-decoration: underline" href="/profile">Welcome {{user.email}} </a></li>
+
+            {{else}}
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+
+        {{/if }}
+    </ul>
+</nav>

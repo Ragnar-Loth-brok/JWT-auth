@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/register.css">
+    <title>Register</title>
+</head>
+<body>
+    <div class="container">
+        <div class="register">
+            <h1>Register Form</h1>
+            <div class="error">Minimum password length is 6 characters</div>
+            <form class="registerForm">
+                <input type="text" name="username" placeholder="Username ( < 10 characters)" required >
+                <input type="text" name="email" placeholder="Email" required >
+                <input type="password" name="password" placeholder="Password ( > 6 characters)" required >
+                <div class="gender">
+                    <input type="radio" id="male" name="gender" checked value="Male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+                </div>
+                <button onsubmit="" >Sign Up</button>
+            </form>
+        </div>
+    </div>
+    {{> submit}}
+</body>
+</html>

@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: comic sans ms;
+}
+.banner {
+    width: 100vw;
+    height: 74vh;
+    position: relative;
+    background-image: linear-gradient(rgba(120, 92, 92, 0.6), rgba(110, 92, 92, 0.6)), url('../bg8.png');
+    background-position-y: -300px;
+    background-position-x: -500px;
+    overflow: hidden;
+}
+.banner h1{
+    width: 80vw;
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    transform: translate(-50%, -80%);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 3rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.banner p{
+    position: absolute;
+    top: 55%;
+    left: 55%;
+    transform: translate(10%, 40px);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.banner p span{
+    color: #fff;
+}
+.banner button{
+    height: 50px;
+    position: absolute;
+    top: 83%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    background-color: transparent;
+    outline: none;
+    border: rgba(44, 62, 80, 1) solid 4px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px -6px #000;
+    z-index: 1;
+    transition: all 0.3s linear;
+    overflow: hidden;
+}
+.banner button a{
+    color: rgba(44, 62, 80, 1);
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 25px;
+}
+.banner button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(44, 62, 80, 1);
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: all 0.3s linear;
+}
+.banner button:hover:before{
+    z-index: -1;
+    transform: translateX(0%);
+    background-color:rgba(44, 62, 80, 1);
+}
+.banner button a:hover{
+    color: rgba(255, 255, 255, 0.8);
+}
+.nav {
+    width: 92vw;
+    padding: 30px;
+    background: none;
+    text-align: center;
+    margin: 40px;
+    box-shadow: 0 10px 20px -6px #000;
+    background-color: rgba(240, 240, 240, 0.8);
+    border-radius: 20%;
+}
+.nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+li{
+    list-style: none;
+    padding: 2px;
+}
+li a{
+    position: relative;
+    margin: 0px 50px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: rgba(36, 37, 42, 1);
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+li a:hover {
+    color: #ff696c;
+}
+
+li a .user:hover{
+    text-decoration: underline;
+}

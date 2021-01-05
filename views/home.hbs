@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/home.css">
+    <title>JWT auth</title>
+</head>
+<body>
+    <div class="container">
+        {{>banner}}
+        <div class="nav">
+            {{!-- <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+
+                    {{ #if user }}
+                        <li><a href="/profile"> {{user.email}} </a></li> 
+
+                        {{ else }}
+
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/register">Register</a></li>
+
+                    {{ /if }}
+                </ul>
+            </nav> --}}
+            {{>nav}}
+        </div>
+    </div>
+</body>
+</html>

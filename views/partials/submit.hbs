@@ -1,0 +1,78 @@
+<script>
+
+    const error = false;
+
+    const form = document.querySelector('form')
+    const validateError = document.querySelector('.error');
+
+    if(!error) {
+        validateError.style.opacity = '0';
+    }
+
+    form.addEventListener('submit', async event => {
+        event.preventDefault();
+
+        const email = form.email.value;
+        const password = form.password.value;
+
+        let username, gender;
+
+        if(form.className === 'registerForm') {        
+            username = form.username.value;
+            gender = form.gender.value;
+
+            try {
+                const result = await fetch('/register', {
+                    method: 'POST',
+                    body: JSON.stringify({username, email, password, gender}),
+                    headers: { 'Content-Type' : 'application/json' }
+                });
+
+                const data = await result.json();
+
+                if(data.errors) {
+                    for(const property in data.errors) {
+                        if(data.errors[property]) {
+                            validateError.innerHTML = data.errors[property];
+                            validateError.style.opacity = '1';
+                        }
+                    }
+                }
+                if(data.user) {
+                    location.assign('/profile');
+                }
+            }
+            catch (error) {
+                console.log(error);
+            }
+        }
+
+        if(form.className === 'loginForm') {
+            try {
+                const result = await fetch('/login', {
+                    method: 'POST',
+                    body: JSON.stringify({email, password}),
+                    headers: { 'Content-Type' : 'application/json' }
+                });
+
+                const data = await result.json();
+
+                if(data.errors) {
+                    for(const property in data.errors) {
+                        if(data.errors[property]) {
+                            validateError.innerHTML = data.errors[property];
+                            validateError.style.opacity = '1';
+                        }
+                    }
+                }
+                if(data.user) {
+                    location.assign('/profile');
+                }
+            }
+            catch (error) {
+                console.log(error);
+            }
+        }
+    })
+
+</script>

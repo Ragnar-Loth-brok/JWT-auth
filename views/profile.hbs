@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/profile.css">
+    <title>Profile</title>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <div><a class="navbar" href="/">Home</a></div>
+            <div class="dp">
+                {{#if gender}}
+                    <img width="350px" src="/profile/profilemen1.jpg" alt="">
+                    {{else}}
+                    <img width="350px" src="/profile/profiledp2.jpg" alt="">
+                {{/if}}
+            </div>
+            <div class="biodata">
+                <h6>Fashion</h6>
+                <h1 style="text-transform: capitalize;">{{user.username}}</h1>
+                <p>It is long extablished fact that a reader will be distracted by readable content of a page when looking at its layout.</p>
+                <h3>Read More >></h3>
+                <a href="../logout"><img src="/profile/logout.jfif" width="25px" alt=""><span>Sign out</span></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
